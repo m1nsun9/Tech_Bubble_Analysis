@@ -1,6 +1,8 @@
 api_keys_am.py
 api_key_jp.py
 api_keys_ml.py
+api_keys_jyi.py
+config.py
 
 .DS_Store
 
