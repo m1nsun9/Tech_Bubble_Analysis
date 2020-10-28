@@ -1,4 +1,506 @@
-,symbol,date,currentRatio,quickRatio,cashRatio,daysOfSalesOutstanding,daysOfInventoryOutstanding,operatingCycle,daysOfPayablesOutstanding,cashConversionCycle,grossProfitMargin,operatingProfitMargin,pretaxProfitMargin,netProfitMargin,effectiveTaxRate,returnOnAssets,returnOnEquity,returnOnCapitalEmployed,netIncomePerEBT,ebtPerEbit,ebitPerRevenue,debtRatio,debtEquityRatio,longTermDebtToCapitalization,totalDebtToCapitalization,interestCoverage,cashFlowToDebtRatio,companyEquityMultiplier,receivablesTurnover,payablesTurnover,inventoryTurnover,fixedAssetTurnover,assetTurnover,operatingCashFlowPerShare,freeCashFlowPerShare,cashPerShare,payoutRatio,operatingCashFlowSalesRatio,freeCashFlowOperatingCashFlowRatio,cashFlowCoverageRatios,shortTermCoverageRatios,capitalExpenditureCoverageRatio,dividendPaidAndCapexCoverageRatio,dividendPayoutRatio,priceBookValueRatio,priceToBookRatio,priceToSalesRatio,priceEarningsRatio,priceToFreeCashFlowsRatio,priceToOperatingCashFlowsRatio,priceCashFlowRatio,priceEarningsToGrowthRatio,priceSalesRatio,dividendYield,enterpriseValueMultiple,priceFairValue
-0,ZTS,2020-06-30,3.4704583103257867,2.394809497515185,1.8514632799558255,232.015503875969,319.64125560538116,376.85055793096257,67.60089686098654,309.249661069976,0.7118863049095607,0.31136950904392763,0.31136950904392763,0.24354005167958656,0.21991701244813278,0.028846889586043308,0.12642521797451375,0.04281399893409131,0.7821576763485477,1.0,0.31136950904392763,0.7718264595607928,3.3826291079812205,0.7069575471698113,0.7069863417510072,8.310344827586206,0.06087560806115358,4.382629107981221,1.5731707317073171,1.3313432835820895,0.2815656565656566,0.7062043795620438,0.11844823628433698,0.9161263334030537,0.7278811964024263,7.013177159590044,0.2519893899204244,0.28294573643410853,0.7945205479452054,0.06087560806115358,438.0,-4.866666666666666,87.6,0.2519893899204244,21.94068558685446,21.94068558685446,42.265584250645986,173.54674912466842,188.00897821839078,149.37699639269405,149.37699639269405,196.1529568711678,42.265584250645986,0.0014519971776561843,106.24098837423313,21.94068558685446
-1,ZTS,2020-03-31,2.7728065078442765,1.6937826844857642,1.1330621731551425,229.6121251629726,291.0262008733624,347.6428892697119,52.07423580786026,295.5686534618516,0.7014341590612777,0.3239895697522816,0.3239895697522816,0.2757496740547588,0.1488933601609658,0.03669326856349757,0.15365056302215765,0.05067808708065667,0.8511066398390342,1.0,0.3239895697522816,0.7611901457321305,3.1874318924809297,0.6841441027994493,,9.377358490566039,,4.18743189248093,1.589637305699482,1.728301886792453,0.30925050641458474,0.7105141269106068,0.13306731436502428,0.8517745302713987,0.6555323590814196,4.07098121085595,0.22458628841607564,0.26597131681877445,0.7696078431372549,,,-4.340425531914893,408.0,0.22458628841607564,20.415439338903013,20.415439338903013,36.638660039113425,132.86927777777777,178.99268949044585,137.75417769607844,137.75417769607844,150.459536774363,36.638660039113425,0.0016902800419499038,91.23743106060606,20.415439338903013
-2,ZTS,2019-12-31,2.629014396456257,1.6710963455149501,1.069767441860465,236.7921146953405,241.25475285171103,299.64184962590457,51.50190114068442,248.13994848522015,0.6857825567502986,0.26105137395459976,0.26105137395459976,0.22939068100358423,0.12128146453089245,0.03326115201385881,0.14180206794682423,0.04487113666700893,0.8787185354691075,1.0,0.26105137395459976,0.7654395842355999,3.2632939438700146,0.6871172732524552,,-7.803571428571429,,4.263293943870015,1.5414364640883977,1.7475083056478404,0.3730496453900709,0.7862846406763739,0.14499783456041576,1.227656441821319,0.8775001371093964,4.075313136767678,0.20572916666666666,0.34767025089605735,0.7147766323024055,,,-3.5060240963855422,-6.689655172413793,0.20572916666666669,23.066606166617426,23.066606166617426,37.31443817156511,162.66762890416666,150.1547343730769,107.32709535945017,107.32709535945017,182.30849528395723,37.31443817156511,0.001264721002282938,135.67218265142856,23.066606166617426
+,Name,Sector,Symbol
+0,3M Company,Industrials,MMM
+1,A.O. Smith Corp,Industrials,AOS
+2,Abbott Laboratories,Health Care,ABT
+3,AbbVie Inc.,Health Care,ABBV
+4,ABIOMED Inc,Health Care,ABMD
+5,Accenture plc,Information Technology,ACN
+6,Activision Blizzard,Communication Services,ATVI
+7,Adobe Inc.,Information Technology,ADBE
+8,Advance Auto Parts,Consumer Discretionary,AAP
+9,Advanced Micro Devices Inc,Information Technology,AMD
+10,AES Corp,Utilities,AES
+11,AFLAC Inc,Financials,AFL
+12,Agilent Technologies Inc,Health Care,A
+13,Air Products & Chemicals Inc,Materials,APD
+14,Akamai Technologies Inc,Information Technology,AKAM
+15,Alaska Air Group Inc,Industrials,ALK
+16,Albemarle Corp,Materials,ALB
+17,Alexandria Real Estate Equities,Real Estate,ARE
+18,Alexion Pharmaceuticals,Health Care,ALXN
+19,Align Technology,Health Care,ALGN
+20,Allegion,Industrials,ALLE
+21,Alliant Energy Corp,Utilities,LNT
+22,Allstate Corp,Financials,ALL
+23,Alphabet Inc. (Class A),Communication Services,GOOGL
+24,Alphabet Inc. (Class C),Communication Services,GOOG
+25,Altria Group Inc,Consumer Staples,MO
+26,Amazon.com Inc.,Consumer Discretionary,AMZN
+27,Amcor plc,Materials,AMCR
+28,Ameren Corp,Utilities,AEE
+29,American Airlines Group,Industrials,AAL
+30,American Electric Power,Utilities,AEP
+31,American Express Co,Financials,AXP
+32,American International Group,Financials,AIG
+33,American Tower Corp.,Real Estate,AMT
+34,American Water Works Company Inc,Utilities,AWK
+35,Ameriprise Financial,Financials,AMP
+36,AmerisourceBergen Corp,Health Care,ABC
+37,AMETEK Inc.,Industrials,AME
+38,Amgen Inc.,Health Care,AMGN
+39,Amphenol Corp,Information Technology,APH
+40,Analog Devices Inc.,Information Technology,ADI
+41,ANSYS,Information Technology,ANSS
+42,Anthem,Health Care,ANTM
+43,Aon plc,Financials,AON
+44,Apache Corporation,Energy,APA
+45,Apartment Investment & Management,Real Estate,AIV
+46,Apple Inc.,Information Technology,AAPL
+47,Applied Materials Inc.,Information Technology,AMAT
+48,Aptiv PLC,Consumer Discretionary,APTV
+49,Archer-Daniels-Midland Co,Consumer Staples,ADM
+50,Arista Networks,Information Technology,ANET
+51,Arthur J. Gallagher & Co.,Financials,AJG
+52,Assurant,Financials,AIZ
+53,AT&T Inc.,Communication Services,T
+54,Atmos Energy,Utilities,ATO
+55,Autodesk Inc.,Information Technology,ADSK
+56,Automatic Data Processing,Information Technology,ADP
+57,AutoZone Inc,Consumer Discretionary,AZO
+58,AvalonBay Communities,Real Estate,AVB
+59,Avery Dennison Corp,Materials,AVY
+60,Baker Hughes Co,Energy,BKR
+61,Ball Corp,Materials,BLL
+62,Bank of America Corp,Financials,BAC
+63,Baxter International Inc.,Health Care,BAX
+64,Becton Dickinson,Health Care,BDX
+65,Berkshire Hathaway,Financials,BRK.B
+66,Best Buy Co. Inc.,Consumer Discretionary,BBY
+67,Bio-Rad Laboratories,Health Care,BIO
+68,Biogen Inc.,Health Care,BIIB
+69,BlackRock,Financials,BLK
+70,Boeing Company,Industrials,BA
+71,Booking Holdings Inc,Consumer Discretionary,BKNG
+72,BorgWarner,Consumer Discretionary,BWA
+73,Boston Properties,Real Estate,BXP
+74,Boston Scientific,Health Care,BSX
+75,Bristol-Myers Squibb,Health Care,BMY
+76,Broadcom Inc.,Information Technology,AVGO
+77,Broadridge Financial Solutions,Information Technology,BR
+78,Brown-Forman Corp.,Consumer Staples,BF.B
+79,C. H. Robinson Worldwide,Industrials,CHRW
+80,Cabot Oil & Gas,Energy,COG
+81,Cadence Design Systems,Information Technology,CDNS
+82,Campbell Soup,Consumer Staples,CPB
+83,Capital One Financial,Financials,COF
+84,Cardinal Health Inc.,Health Care,CAH
+85,Carmax Inc,Consumer Discretionary,KMX
+86,Carnival Corp.,Consumer Discretionary,CCL
+87,Carrier Global,Industrials,CARR
+88,Caterpillar Inc.,Industrials,CAT
+89,Cboe Global Markets,Financials,CBOE
+90,CBRE Group,Real Estate,CBRE
+91,CDW,Information Technology,CDW
+92,Celanese,Materials,CE
+93,Centene Corporation,Health Care,CNC
+94,CenterPoint Energy,Utilities,CNP
+95,CenturyLink Inc,Communication Services,CTL
+96,Cerner,Health Care,CERN
+97,CF Industries Holdings Inc,Materials,CF
+98,Charles Schwab Corporation,Financials,SCHW
+99,Charter Communications,Communication Services,CHTR
+100,Chevron Corp.,Energy,CVX
+101,Chipotle Mexican Grill,Consumer Discretionary,CMG
+102,Chubb Limited,Financials,CB
+103,Church & Dwight,Consumer Staples,CHD
+104,CIGNA Corp.,Health Care,CI
+105,Cincinnati Financial,Financials,CINF
+106,Cintas Corporation,Industrials,CTAS
+107,Cisco Systems,Information Technology,CSCO
+108,Citigroup Inc.,Financials,C
+109,Citizens Financial Group,Financials,CFG
+110,Citrix Systems,Information Technology,CTXS
+111,CME Group Inc.,Financials,CME
+112,CMS Energy,Utilities,CMS
+113,Coca-Cola Company,Consumer Staples,KO
+114,Cognizant Technology Solutions,Information Technology,CTSH
+115,Colgate-Palmolive,Consumer Staples,CL
+116,Comcast Corp.,Communication Services,CMCSA
+117,Comerica Inc.,Financials,CMA
+118,Conagra Brands,Consumer Staples,CAG
+119,Concho Resources,Energy,CXO
+120,ConocoPhillips,Energy,COP
+121,Consolidated Edison,Utilities,ED
+122,Constellation Brands,Consumer Staples,STZ
+123,Copart Inc,Industrials,CPRT
+124,Corning Inc.,Information Technology,GLW
+125,Corteva,Materials,CTVA
+126,Costco Wholesale Corp.,Consumer Staples,COST
+127,Coty Inc,Consumer Staples,COTY
+128,Crown Castle International Corp.,Real Estate,CCI
+129,CSX Corp.,Industrials,CSX
+130,Cummins Inc.,Industrials,CMI
+131,CVS Health,Health Care,CVS
+132,D. R. Horton,Consumer Discretionary,DHI
+133,Danaher Corp.,Health Care,DHR
+134,Darden Restaurants,Consumer Discretionary,DRI
+135,DaVita Inc.,Health Care,DVA
+136,Deere & Co.,Industrials,DE
+137,Delta Air Lines Inc.,Industrials,DAL
+138,Dentsply Sirona,Health Care,XRAY
+139,Devon Energy,Energy,DVN
+140,DexCom,Health Care,DXCM
+141,Diamondback Energy,Energy,FANG
+142,Digital Realty Trust Inc,Real Estate,DLR
+143,Discover Financial Services,Financials,DFS
+144,Discovery Inc. (Class A),Communication Services,DISCA
+145,Discovery Inc. (Class C),Communication Services,DISCK
+146,Dish Network,Communication Services,DISH
+147,Dollar General,Consumer Discretionary,DG
+148,Dollar Tree,Consumer Discretionary,DLTR
+149,Dominion Energy,Utilities,D
+150,Domino's Pizza,Consumer Discretionary,DPZ
+151,Dover Corporation,Industrials,DOV
+152,Dow Inc.,Materials,DOW
+153,DTE Energy Co.,Utilities,DTE
+154,Duke Energy,Utilities,DUK
+155,Duke Realty Corp,Real Estate,DRE
+156,DuPont de Nemours Inc,Materials,DD
+157,DXC Technology,Information Technology,DXC
+158,E*Trade,Financials,ETFC
+159,Eastman Chemical,Materials,EMN
+160,Eaton Corporation,Industrials,ETN
+161,eBay Inc.,Consumer Discretionary,EBAY
+162,Ecolab Inc.,Materials,ECL
+163,Edison Int'l,Utilities,EIX
+164,Edwards Lifesciences,Health Care,EW
+165,Electronic Arts,Communication Services,EA
+166,Emerson Electric Company,Industrials,EMR
+167,Entergy Corp.,Utilities,ETR
+168,EOG Resources,Energy,EOG
+169,Equifax Inc.,Industrials,EFX
+170,Equinix,Real Estate,EQIX
+171,Equity Residential,Real Estate,EQR
+172,Essex Property Trust Inc.,Real Estate,ESS
+173,Estée Lauder Companies,Consumer Staples,EL
+174,Everest Re Group Ltd.,Financials,RE
+175,Evergy,Utilities,EVRG
+176,Eversource Energy,Utilities,ES
+177,Exelon Corp.,Utilities,EXC
+178,Expedia Group,Consumer Discretionary,EXPE
+179,Expeditors,Industrials,EXPD
+180,Extra Space Storage,Real Estate,EXR
+181,Exxon Mobil Corp.,Energy,XOM
+182,F5 Networks,Information Technology,FFIV
+183,Facebook Inc.,Communication Services,FB
+184,Fastenal Co,Industrials,FAST
+185,Federal Realty Investment Trust,Real Estate,FRT
+186,FedEx Corporation,Industrials,FDX
+187,Fidelity National Information Services,Information Technology,FIS
+188,Fifth Third Bancorp,Financials,FITB
+189,First Republic Bank,Financials,FRC
+190,FirstEnergy Corp,Utilities,FE
+191,Fiserv Inc,Information Technology,FISV
+192,FleetCor Technologies Inc,Information Technology,FLT
+193,FLIR Systems,Information Technology,FLIR
+194,Flowserve Corporation,Industrials,FLS
+195,FMC Corporation,Materials,FMC
+196,Ford Motor Company,Consumer Discretionary,F
+197,Fortinet,Information Technology,FTNT
+198,Fortive Corp,Industrials,FTV
+199,Fortune Brands Home & Security,Industrials,FBHS
+200,Fox Corporation (Class A),Communication Services,FOXA
+201,Fox Corporation (Class B),Communication Services,FOX
+202,Franklin Resources,Financials,BEN
+203,Freeport-McMoRan Inc.,Materials,FCX
+204,Gap Inc.,Consumer Discretionary,GPS
+205,Garmin Ltd.,Consumer Discretionary,GRMN
+206,Gartner Inc,Information Technology,IT
+207,General Dynamics,Industrials,GD
+208,General Electric,Industrials,GE
+209,General Mills,Consumer Staples,GIS
+210,General Motors,Consumer Discretionary,GM
+211,Genuine Parts,Consumer Discretionary,GPC
+212,Gilead Sciences,Health Care,GILD
+213,Global Payments Inc.,Information Technology,GPN
+214,Globe Life Inc.,Financials,GL
+215,Goldman Sachs Group,Financials,GS
+216,Grainger (W.W.) Inc.,Industrials,GWW
+217,H&R Block,Consumer Discretionary,HRB
+218,Halliburton Co.,Energy,HAL
+219,Hanesbrands Inc,Consumer Discretionary,HBI
+220,Hartford Financial Svc.Gp.,Financials,HIG
+221,Hasbro Inc.,Consumer Discretionary,HAS
+222,HCA Healthcare,Health Care,HCA
+223,Healthpeak Properties,Real Estate,PEAK
+224,Henry Schein,Health Care,HSIC
+225,Hess Corporation,Energy,HES
+226,Hewlett Packard Enterprise,Information Technology,HPE
+227,Hilton Worldwide Holdings Inc,Consumer Discretionary,HLT
+228,HollyFrontier Corp,Energy,HFC
+229,Hologic,Health Care,HOLX
+230,Home Depot,Consumer Discretionary,HD
+231,Honeywell Int'l Inc.,Industrials,HON
+232,Hormel Foods Corp.,Consumer Staples,HRL
+233,Host Hotels & Resorts,Real Estate,HST
+234,Howmet Aerospace,Industrials,HWM
+235,HP Inc.,Information Technology,HPQ
+236,Humana Inc.,Health Care,HUM
+237,Huntington Bancshares,Financials,HBAN
+238,Huntington Ingalls Industries,Industrials,HII
+239,IDEX Corporation,Industrials,IEX
+240,IDEXX Laboratories,Health Care,IDXX
+241,IHS Markit Ltd.,Industrials,INFO
+242,Illinois Tool Works,Industrials,ITW
+243,Illumina Inc,Health Care,ILMN
+244,Incyte,Health Care,INCY
+245,Ingersoll Rand,Industrials,IR
+246,Intel Corp.,Information Technology,INTC
+247,Intercontinental Exchange,Financials,ICE
+248,International Business Machines,Information Technology,IBM
+249,International Flavors & Fragrances,Materials,IFF
+250,International Paper,Materials,IP
+251,Interpublic Group,Communication Services,IPG
+252,Intuit Inc.,Information Technology,INTU
+253,Intuitive Surgical Inc.,Health Care,ISRG
+254,Invesco Ltd.,Financials,IVZ
+255,IPG Photonics Corp.,Information Technology,IPGP
+256,IQVIA Holdings Inc.,Health Care,IQV
+257,Iron Mountain Incorporated,Real Estate,IRM
+258,J. B. Hunt Transport Services,Industrials,JBHT
+259,Jack Henry & Associates,Information Technology,JKHY
+260,Jacobs Engineering Group,Industrials,J
+261,JM Smucker,Consumer Staples,SJM
+262,Johnson & Johnson,Health Care,JNJ
+263,Johnson Controls International,Industrials,JCI
+264,JPMorgan Chase & Co.,Financials,JPM
+265,Juniper Networks,Information Technology,JNPR
+266,Kansas City Southern,Industrials,KSU
+267,Kellogg Co.,Consumer Staples,K
+268,KeyCorp,Financials,KEY
+269,Keysight Technologies,Information Technology,KEYS
+270,Kimberly-Clark,Consumer Staples,KMB
+271,Kimco Realty,Real Estate,KIM
+272,Kinder Morgan,Energy,KMI
+273,KLA Corporation,Information Technology,KLAC
+274,Kohl's Corp.,Consumer Discretionary,KSS
+275,Kraft Heinz Co,Consumer Staples,KHC
+276,Kroger Co.,Consumer Staples,KR
+277,L Brands Inc.,Consumer Discretionary,LB
+278,L3Harris Technologies,Industrials,LHX
+279,Laboratory Corp. of America Holding,Health Care,LH
+280,Lam Research,Information Technology,LRCX
+281,Lamb Weston Holdings Inc,Consumer Staples,LW
+282,Las Vegas Sands,Consumer Discretionary,LVS
+283,Leggett & Platt,Consumer Discretionary,LEG
+284,Leidos Holdings,Information Technology,LDOS
+285,Lennar Corp.,Consumer Discretionary,LEN
+286,Lilly (Eli) & Co.,Health Care,LLY
+287,Lincoln National,Financials,LNC
+288,Linde plc,Materials,LIN
+289,Live Nation Entertainment,Communication Services,LYV
+290,LKQ Corporation,Consumer Discretionary,LKQ
+291,Lockheed Martin Corp.,Industrials,LMT
+292,Loews Corp.,Financials,L
+293,Lowe's Cos.,Consumer Discretionary,LOW
+294,LyondellBasell,Materials,LYB
+295,M&T Bank Corp.,Financials,MTB
+296,Marathon Oil Corp.,Energy,MRO
+297,Marathon Petroleum,Energy,MPC
+298,MarketAxess,Financials,MKTX
+299,Marriott Int'l.,Consumer Discretionary,MAR
+300,Marsh & McLennan,Financials,MMC
+301,Martin Marietta Materials,Materials,MLM
+302,Masco Corp.,Industrials,MAS
+303,Mastercard Inc.,Information Technology,MA
+304,Maxim Integrated Products Inc,Information Technology,MXIM
+305,McCormick & Co.,Consumer Staples,MKC
+306,McDonald's Corp.,Consumer Discretionary,MCD
+307,McKesson Corp.,Health Care,MCK
+308,Medtronic plc,Health Care,MDT
+309,Merck & Co.,Health Care,MRK
+310,MetLife Inc.,Financials,MET
+311,Mettler Toledo,Health Care,MTD
+312,MGM Resorts International,Consumer Discretionary,MGM
+313,Microchip Technology,Information Technology,MCHP
+314,Micron Technology,Information Technology,MU
+315,Microsoft Corp.,Information Technology,MSFT
+316,Mid-America Apartments,Real Estate,MAA
+317,Mohawk Industries,Consumer Discretionary,MHK
+318,Molson Coors Beverage Company,Consumer Staples,TAP
+319,Mondelez International,Consumer Staples,MDLZ
+320,Monster Beverage,Consumer Staples,MNST
+321,Moody's Corp,Financials,MCO
+322,Morgan Stanley,Financials,MS
+323,Motorola Solutions Inc.,Information Technology,MSI
+324,MSCI Inc,Financials,MSCI
+325,Mylan N.V.,Health Care,MYL
+326,Nasdaq Inc.,Financials,NDAQ
+327,National Oilwell Varco Inc.,Energy,NOV
+328,NetApp,Information Technology,NTAP
+329,Netflix Inc.,Communication Services,NFLX
+330,Newell Brands,Consumer Discretionary,NWL
+331,Newmont Corporation,Materials,NEM
+332,News Corp. Class A,Communication Services,NWSA
+333,News Corp. Class B,Communication Services,NWS
+334,NextEra Energy,Utilities,NEE
+335,Nielsen Holdings,Industrials,NLSN
+336,Nike Inc.,Consumer Discretionary,NKE
+337,NiSource Inc.,Utilities,NI
+338,Noble Energy,Energy,NBL
+339,Norfolk Southern Corp.,Industrials,NSC
+340,Northern Trust Corp.,Financials,NTRS
+341,Northrop Grumman,Industrials,NOC
+342,NortonLifeLock,Information Technology,NLOK
+343,Norwegian Cruise Line Holdings,Consumer Discretionary,NCLH
+344,NRG Energy,Utilities,NRG
+345,Nucor Corp.,Materials,NUE
+346,Nvidia Corporation,Information Technology,NVDA
+347,NVR Inc.,Consumer Discretionary,NVR
+348,O'Reilly Automotive,Consumer Discretionary,ORLY
+349,Occidental Petroleum,Energy,OXY
+350,Old Dominion Freight Line,Industrials,ODFL
+351,Omnicom Group,Communication Services,OMC
+352,ONEOK,Energy,OKE
+353,Oracle Corp.,Information Technology,ORCL
+354,Otis Worldwide,Industrials,OTIS
+355,PACCAR Inc.,Industrials,PCAR
+356,Packaging Corporation of America,Materials,PKG
+357,Parker-Hannifin,Industrials,PH
+358,Paychex Inc.,Information Technology,PAYX
+359,Paycom,Information Technology,PAYC
+360,PayPal,Information Technology,PYPL
+361,Pentair plc,Industrials,PNR
+362,People's United Financial,Financials,PBCT
+363,PepsiCo Inc.,Consumer Staples,PEP
+364,PerkinElmer,Health Care,PKI
+365,Perrigo,Health Care,PRGO
+366,Pfizer Inc.,Health Care,PFE
+367,Philip Morris International,Consumer Staples,PM
+368,Phillips 66,Energy,PSX
+369,Pinnacle West Capital,Utilities,PNW
+370,Pioneer Natural Resources,Energy,PXD
+371,PNC Financial Services,Financials,PNC
+372,PPG Industries,Materials,PPG
+373,PPL Corp.,Utilities,PPL
+374,Principal Financial Group,Financials,PFG
+375,Procter & Gamble,Consumer Staples,PG
+376,Progressive Corp.,Financials,PGR
+377,Prologis,Real Estate,PLD
+378,Prudential Financial,Financials,PRU
+379,Public Service Enterprise Group (PSEG),Utilities,PEG
+380,Public Storage,Real Estate,PSA
+381,PulteGroup,Consumer Discretionary,PHM
+382,PVH Corp.,Consumer Discretionary,PVH
+383,Qorvo,Information Technology,QRVO
+384,QUALCOMM Inc.,Information Technology,QCOM
+385,Quanta Services Inc.,Industrials,PWR
+386,Quest Diagnostics,Health Care,DGX
+387,Ralph Lauren Corporation,Consumer Discretionary,RL
+388,Raymond James Financial Inc.,Financials,RJF
+389,Raytheon Technologies,Industrials,RTX
+390,Realty Income Corporation,Real Estate,O
+391,Regency Centers Corporation,Real Estate,REG
+392,Regeneron Pharmaceuticals,Health Care,REGN
+393,Regions Financial Corp.,Financials,RF
+394,Republic Services Inc,Industrials,RSG
+395,ResMed,Health Care,RMD
+396,Robert Half International,Industrials,RHI
+397,Rockwell Automation Inc.,Industrials,ROK
+398,Rollins Inc.,Industrials,ROL
+399,Roper Technologies,Industrials,ROP
+400,Ross Stores,Consumer Discretionary,ROST
+401,Royal Caribbean Group,Consumer Discretionary,RCL
+402,S&P Global Inc.,Financials,SPGI
+403,Salesforce.com,Information Technology,CRM
+404,SBA Communications,Real Estate,SBAC
+405,Schlumberger Ltd.,Energy,SLB
+406,Seagate Technology,Information Technology,STX
+407,Sealed Air,Materials,SEE
+408,Sempra Energy,Utilities,SRE
+409,ServiceNow,Information Technology,NOW
+410,Sherwin-Williams,Materials,SHW
+411,Simon Property Group Inc,Real Estate,SPG
+412,Skyworks Solutions,Information Technology,SWKS
+413,SL Green Realty,Real Estate,SLG
+414,Snap-on,Industrials,SNA
+415,Southern Company,Utilities,SO
+416,Southwest Airlines,Industrials,LUV
+417,Stanley Black & Decker,Industrials,SWK
+418,Starbucks Corp.,Consumer Discretionary,SBUX
+419,State Street Corp.,Financials,STT
+420,STERIS plc,Health Care,STE
+421,Stryker Corp.,Health Care,SYK
+422,SVB Financial,Financials,SIVB
+423,Synchrony Financial,Financials,SYF
+424,Synopsys Inc.,Information Technology,SNPS
+425,Sysco Corp.,Consumer Staples,SYY
+426,T-Mobile US,Communication Services,TMUS
+427,T. Rowe Price Group,Financials,TROW
+428,Take-Two Interactive,Communication Services,TTWO
+429,Tapestry Inc.,Consumer Discretionary,TPR
+430,Target Corp.,Consumer Discretionary,TGT
+431,TE Connectivity Ltd.,Information Technology,TEL
+432,TechnipFMC,Energy,FTI
+433,Teledyne Technologies,Industrials,TDY
+434,Teleflex,Health Care,TFX
+435,Texas Instruments,Information Technology,TXN
+436,Textron Inc.,Industrials,TXT
+437,The Bank of New York Mellon,Financials,BK
+438,The Clorox Company,Consumer Staples,CLX
+439,The Cooper Companies,Health Care,COO
+440,The Hershey Company,Consumer Staples,HSY
+441,The Mosaic Company,Materials,MOS
+442,The Travelers Companies Inc.,Financials,TRV
+443,The Walt Disney Company,Communication Services,DIS
+444,Thermo Fisher Scientific,Health Care,TMO
+445,Tiffany & Co.,Consumer Discretionary,TIF
+446,TJX Companies Inc.,Consumer Discretionary,TJX
+447,Tractor Supply Company,Consumer Discretionary,TSCO
+448,Trane Technologies plc,Industrials,TT
+449,TransDigm Group,Industrials,TDG
+450,Truist Financial,Financials,TFC
+451,Twitter Inc.,Communication Services,TWTR
+452,Tyler Technologies,Information Technology,TYL
+453,Tyson Foods,Consumer Staples,TSN
+454,U.S. Bancorp,Financials,USB
+455,UDR Inc.,Real Estate,UDR
+456,Ulta Beauty,Consumer Discretionary,ULTA
+457,Under Armour (Class A),Consumer Discretionary,UAA
+458,Under Armour (Class C),Consumer Discretionary,UA
+459,Union Pacific Corp,Industrials,UNP
+460,United Airlines Holdings,Industrials,UAL
+461,United Health Group Inc.,Health Care,UNH
+462,United Parcel Service,Industrials,UPS
+463,United Rentals Inc.,Industrials,URI
+464,Universal Health Services,Health Care,UHS
+465,Unum Group,Financials,UNM
+466,Valero Energy,Energy,VLO
+467,Varian Medical Systems,Health Care,VAR
+468,Ventas Inc,Real Estate,VTR
+469,Verisign Inc.,Information Technology,VRSN
+470,Verisk Analytics,Industrials,VRSK
+471,Verizon Communications,Communication Services,VZ
+472,Vertex Pharmaceuticals Inc,Health Care,VRTX
+473,VF Corporation,Consumer Discretionary,VFC
+474,ViacomCBS,Communication Services,VIAC
+475,Visa Inc.,Information Technology,V
+476,Vornado Realty Trust,Real Estate,VNO
+477,Vulcan Materials,Materials,VMC
+478,W. R. Berkley Corporation,Financials,WRB
+479,Wabtec Corporation,Industrials,WAB
+480,Walgreens Boots Alliance,Consumer Staples,WBA
+481,Walmart,Consumer Staples,WMT
+482,Waste Management Inc.,Industrials,WM
+483,Waters Corporation,Health Care,WAT
+484,WEC Energy Group,Utilities,WEC
+485,Wells Fargo,Financials,WFC
+486,Welltower Inc.,Real Estate,WELL
+487,West Pharmaceutical Services,Health Care,WST
+488,Western Digital,Information Technology,WDC
+489,Western Union Co,Information Technology,WU
+490,WestRock,Materials,WRK
+491,Weyerhaeuser,Real Estate,WY
+492,Whirlpool Corp.,Consumer Discretionary,WHR
+493,Williams Companies,Energy,WMB
+494,Willis Towers Watson,Financials,WLTW
+495,Wynn Resorts Ltd,Consumer Discretionary,WYNN
+496,Xcel Energy Inc,Utilities,XEL
+497,Xerox,Information Technology,XRX
+498,Xilinx,Information Technology,XLNX
+499,Xylem Inc.,Industrials,XYL
+500,Yum! Brands Inc,Consumer Discretionary,YUM
+501,Zebra Technologies,Information Technology,ZBRA
+502,Zimmer Biomet Holdings,Health Care,ZBH
+503,Zions Bancorp,Financials,ZION
+504,Zoetis,Health Care,ZTS
